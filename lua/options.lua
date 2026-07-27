@@ -72,3 +72,6 @@ vim.api.nvim_create_autocmd('FileType', {
         { buffer = true })
     end,
 })
+
+vim.opt.mouse = ''
+vim.opt.mousescroll = 'ver:0,hor:0'
