@@ -49,6 +49,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     opts.desc = "Restart LSP"
     keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+    opts.desc = "Format buffer"
+    keymap.set("n", "<leader>f", function()
+        require("conform").format({
+            async = true,
+            lsp_fallback = true,
+        })
+    end, opts)
   end,
 })
 
