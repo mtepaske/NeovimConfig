@@ -65,6 +65,8 @@ vim.keymap.set('v', '<leader>d', '\"_d')
 vim.keymap.set('n', '<leader>s', [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Keymappings from the Primagen
 
+vim.keymap.set("n", "<Leader>nf", ":lua require('neogen').generate()<CR>")
+
 vim.api.nvim_create_autocmd('FileType', {
     pattern = 'python',
     callback = function()
