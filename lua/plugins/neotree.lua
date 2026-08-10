@@ -8,9 +8,8 @@ return {
     },
     lazy = false, -- neo-tree will lazily load itself
     config = function()
-        vim.keymap.set('n', '\\', ':Neotree toggle filesystem reveal left<CR>')
-        vim.keymap.set('n', '<leader>b', ':Neotree toggle show buffers left<CR>')
-        vim.keymap.set('n', '<leader>gs', ':Neotree float git status<CR>')
-    end
+        vim.keymap.set("n", "\\", ":Neotree toggle filesystem reveal left<CR>")
+        vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers left<CR>")
+        vim.keymap.set("n", "<leader>gs", ":Neotree float git status<CR>")
+    end,
 } -- NeoTree is a file explorer page within Neovim
-

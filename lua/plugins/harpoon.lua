@@ -1,4 +1,4 @@
 return {
-    'ThePrimeagen/harpoon',
-    opts = {}
+    "ThePrimeagen/harpoon",
+    opts = {},
 }
