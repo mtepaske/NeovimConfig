@@ -30,10 +30,10 @@ vim.opt.signcolumn = "yes"
 -- Keeps curser above the bottom of screen when scrolling
 
 vim.api.nvim_create_autocmd("TextYankPost", {
-  desc = "Highlight when yanking text",
-  callback = function()
-    vim.hl.on_yank()
-  end,
+	desc = "Highlight when yanking text",
+	callback = function()
+		vim.hl.on_yank()
+	end,
 })
 -- Highlights when yanking
 
@@ -68,10 +68,10 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<Leader>nf", ":lua require('neogen').generate()<CR>")
 
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "python",
-  callback = function()
-    vim.keymap.set("n", "<leader>r", ":!python3 %<CR>", { buffer = true })
-  end,
+	pattern = "python",
+	callback = function()
+		vim.keymap.set("n", "<leader>r", ":!python3 %<CR>", { buffer = true })
+	end,
 })
 
 vim.opt.mouse = ""
