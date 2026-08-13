@@ -8,6 +8,16 @@ return {
 	},
 	lazy = false, -- neo-tree will lazily load itself
 	config = function()
+		require("neo-tree").setup({
+			event_handlers = {
+				{
+					event = "file_open_requested",
+					handler = function()
+						require("neo-tree.command").execute({ action = "close" })
+					end,
+				},
+			},
+		})
 		vim.keymap.set("n", "\\", ":Neotree toggle filesystem reveal left<CR>")
 		vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers left<CR>")
 		vim.keymap.set("n", "<leader>gs", ":Neotree float git status<CR>")
