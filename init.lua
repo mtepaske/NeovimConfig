@@ -34,3 +34,24 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 })
+
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		local path = vim.fn.argv(0)
+
+		if path == "" then
+			return
+		end
+
+		if vim.fn.isdirectory(path) == 1 then
+			local git_root =
+				vim.fn.systemlist("git -C " .. vim.fn.shellescape(path) .. " rev-parse --show-toplevel 2>/dev/null")[1]
+
+			if git_root and git_root ~= "" then
+				vim.cmd("cd " .. vim.fn.fnameescape(git_root))
+			else
+				vim.cmd("cd " .. vim.fn.fnameescape(path))
+			end
+		end
+	end,
+})

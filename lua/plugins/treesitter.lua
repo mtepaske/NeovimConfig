@@ -3,9 +3,9 @@ return {
 	lazy = false,
 	build = ":TSUpdate",
 	config = function()
-		require("nvim-treesitter").install({ "lua", "javascript", "python" })
+		require("nvim-treesitter").install({ "lua", "javascript", "python", "markdown" })
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "lua", "javascript", "python" },
+			pattern = { "lua", "javascript", "python", "markdown" },
 			callback = function()
 				-- syntax highlighting, provided by Neovim
 				vim.treesitter.start()
