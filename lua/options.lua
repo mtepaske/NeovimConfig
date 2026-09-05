@@ -43,6 +43,7 @@ vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clears search highlighting" 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down " })
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down " })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join line without moving curser" })
+-- Line joining and line moving keymaps
 
 vim.keymap.set("n", "<leader>hm", ':lua require("harpoon.mark").add_file()<CR>')
 vim.keymap.set("n", "<leader>hl", ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
@@ -54,6 +55,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+-- Page jumping and seaarch jumping keymaps
 
 vim.keymap.set("x", "<leader>p", '"_dP')
 vim.keymap.set("n", "<leader>y", '"+y')
@@ -61,6 +63,7 @@ vim.keymap.set("v", "<leader>y", '"+y')
 vim.keymap.set("n", "<leader>Y", '"+Y')
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("v", "<leader>d", '"_d')
+-- Better copy and paste keymaps
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Keymappings from the Primagen
@@ -74,6 +77,8 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.keymap.set("n", "<leader>r", ":!python3 %<CR>", { buffer = true })
 	end,
 })
+-- Run python code in nvim
 
 vim.opt.mouse = ""
 vim.opt.mousescroll = "ver:0,hor:0"
+-- Change mouse settings

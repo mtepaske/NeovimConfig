@@ -1,5 +1,4 @@
 require("options")
--- require('keymaps')
 require("lsp")
 
 vim.lsp.config("lua_ls", {
@@ -11,8 +10,8 @@ vim.lsp.config("lua_ls", {
 		},
 	},
 })
+-- Adds vim as a global variable to supress warnings
 
--- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
@@ -34,6 +33,7 @@ require("lazy").setup({
 		{ import = "plugins" },
 	},
 })
+-- Bootstrap lazy.nvim
 
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
@@ -55,3 +55,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
 		end
 	end,
 })
+-- Fixes working directory issues
