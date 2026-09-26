@@ -12,6 +12,8 @@ return {
 			html = { "prettier" },
 			css = { "prettier" },
 			json = { "prettier" },
+
+			r = { "styler" },
 		},
 
 		formatters = {
