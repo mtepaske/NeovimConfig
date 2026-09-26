@@ -1,7 +1,9 @@
 return {
 	{
-		-- see the image.nvim readme for more information about configuring this plugin
 		"3rd/image.nvim",
+		cond = function()
+			return vim.fn.has("mac") == 1
+		end,
 		build = false,
 		opts = {
 			processor = "magick_cli",
@@ -20,8 +22,11 @@ return {
 		dependencies = {},
 		build = ":UpdateRemotePlugins",
 		init = function()
-			-- these are examples, not defaults. Please see the readme
-			vim.g.molten_image_provider = "image.nvim"
+			if vim.fn.has("mac") == 1 then
+				vim.g.molten_image_provider = "image.nvim"
+			else
+				vim.g.molten_auto_image_popup = true
+			end
 			vim.g.molten_output_win_max_height = 20
 		end,
 	},
