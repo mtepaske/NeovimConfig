@@ -35,6 +35,7 @@ require("lazy").setup({
 })
 -- Bootstrap lazy.nvim
 
+--[[
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
 		local path = vim.fn.argv(0)
@@ -56,3 +57,4 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 -- Fixes working directory issues
+--]]
