@@ -19,7 +19,7 @@ return {
 				map("n", "<leader>hs", gs.stage_hunk, "Stage Git hunk")
 				map("n", "<leader>hr", gs.reset_hunk, "Reset Git hunk")
 				map("n", "<leader>hp", gs.preview_hunk, "Preview Git hunk")
-				map("n", "<leader>hd", "gs.diffthis", "View Diff")
+				map("n", "<leader>hd", gs.diffthis, "View Diff")
 			end,
 		},
 	},

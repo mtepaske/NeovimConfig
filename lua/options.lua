@@ -45,6 +45,9 @@ vim.opt.foldlevelstart = 99
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 -- Keymapping for easy saving
 
+vim.keymap.set("n", "<leader>t", "<cmd>botright 12split | term<CR>")
+-- Opens a terminal buffer in a bottom split
+
 vim.keymap.set("n", "\\", "<cmd>Neotree toggle filesystem reveal left<CR>")
 vim.keymap.set("n", "<leader>b", "<cmd>Neotree toggle show buffers left<CR>")
 vim.keymap.set("n", "<leader>gs", "<cmd>Neotree float git status<CR>")
@@ -83,14 +86,6 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 
 vim.keymap.set("n", "<Leader>nf", "<cmd>lua require('neogen').generate()<CR>")
 -- Generate docstring
-
-vim.api.nvim_create_autocmd("FileType", {
-	pattern = "python",
-	callback = function()
-		vim.keymap.set("n", "<leader>r", ":!python3 %<CR>", { buffer = true })
-	end,
-})
--- Run python code in nvim
 
 vim.opt.mouse = ""
 vim.opt.mousescroll = "ver:0,hor:0"
