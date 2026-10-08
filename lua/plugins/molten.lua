@@ -7,7 +7,7 @@ return {
 		build = false,
 		opts = {
 			processor = "magick_cli",
-			backend = "kitty", -- whatever backend you would like to use
+			backend = "kitty",
 			max_width = 100,
 			max_height = 12,
 			max_height_window_percentage = math.huge,
@@ -18,7 +18,7 @@ return {
 	},
 	{
 		"benlubas/molten-nvim",
-		version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+		version = "^1.0.0",
 		dependencies = {},
 		build = ":UpdateRemotePlugins",
 		init = function()

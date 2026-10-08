@@ -37,6 +37,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 -- Highlights when yanking
 
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+vim.opt.foldlevelstart = 99
+-- Enables folding for expressions
+
+vim.keymap.set("n", "\\", ":Neotree toggle filesystem reveal left<CR>")
+vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers left<CR>")
+vim.keymap.set("n", "<leader>gs", ":Neotree float git status<CR>")
+-- Neotree keymappings
+
 vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clears search highlighting" })
 -- Removes highlighting from search
 
