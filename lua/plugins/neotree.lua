@@ -17,6 +17,13 @@ return {
 					end,
 				},
 			},
+			filesystem = {
+				filtered_items = {
+					always_show_by_pattern = {
+						"*.csv",
+					},
+				},
+			},
 		})
 		vim.keymap.set("n", "\\", ":Neotree toggle filesystem reveal left<CR>")
 		vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers left<CR>")
