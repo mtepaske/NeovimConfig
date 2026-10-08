@@ -17,7 +17,7 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 -- Default split is now below and to the right
 
-vim.optignorecase = true
+vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.laststatus = 3
 -- Smart case for searching
@@ -42,23 +42,26 @@ vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevelstart = 99
 -- Enables folding for expressions
 
-vim.keymap.set("n", "\\", ":Neotree toggle filesystem reveal left<CR>")
-vim.keymap.set("n", "<leader>b", ":Neotree toggle show buffers left<CR>")
-vim.keymap.set("n", "<leader>gs", ":Neotree float git status<CR>")
+vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
+-- Keymapping for easy saving
+
+vim.keymap.set("n", "\\", "<cmd>Neotree toggle filesystem reveal left<CR>")
+vim.keymap.set("n", "<leader>b", "<cmd>Neotree toggle show buffers left<CR>")
+vim.keymap.set("n", "<leader>gs", "<cmd>Neotree float git status<CR>")
 -- Neotree keymappings
 
-vim.keymap.set("n", "<C-c>", ":nohl<CR>", { desc = "Clears search highlighting" })
+vim.keymap.set("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clears search highlighting" })
 -- Removes highlighting from search
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down " })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down " })
+vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv", { desc = "Move line down " })
+vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv", { desc = "Move line down " })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join line without moving curser" })
 -- Line joining and line moving keymaps
 
-vim.keymap.set("n", "<leader>hm", ':lua require("harpoon.mark").add_file()<CR>')
-vim.keymap.set("n", "<leader>hl", ':lua require("harpoon.ui").toggle_quick_menu()<CR>')
-vim.keymap.set("n", "<leader>hn", ':lua require("harpoon.ui").nav_next()<CR>')
-vim.keymap.set("n", "<leader>hp", ':lua require("harpoon.ui").nav_prev()<CR>')
+vim.keymap.set("n", "<leader>hm", '<cmd>lua require("harpoon.mark").add_file()<CR>')
+vim.keymap.set("n", "<leader>hl", '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>')
+vim.keymap.set("n", "<leader>hn", '<cmd>lua require("harpoon.ui").nav_next()<CR>')
+vim.keymap.set("n", "<leader>hp", '<cmd>lua require("harpoon.ui").nav_prev()<CR>')
 -- Harpoon Keymappings
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -78,7 +81,7 @@ vim.keymap.set("v", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- Keymappings from the Primagen
 
-vim.keymap.set("n", "<Leader>nf", ":lua require('neogen').generate()<CR>")
+vim.keymap.set("n", "<Leader>nf", "<cmd>lua require('neogen').generate()<CR>")
 -- Generate docstring
 
 vim.api.nvim_create_autocmd("FileType", {

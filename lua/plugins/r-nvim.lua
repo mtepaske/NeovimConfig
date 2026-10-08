@@ -28,4 +28,4 @@ return {
 		},
 		auto_start = "always",
 	},
-}
+} -- Adds support for an R console for an Rstuio like workflow

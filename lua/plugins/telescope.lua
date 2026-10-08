@@ -18,4 +18,4 @@ return {
 			desc = "Live grep",
 		},
 	},
-}
+} -- Adds a fzf file search

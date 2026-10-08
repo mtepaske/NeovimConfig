@@ -65,4 +65,4 @@ return {
 		},
 		opts_extend = { "sources.default" },
 	},
-}
+} -- lsp, linter, and formatter install manager. Adds completion engine

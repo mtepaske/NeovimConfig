@@ -12,14 +12,13 @@ return {
 			max_height = 12,
 			max_height_window_percentage = math.huge,
 			max_width_window_percentage = math.huge,
-			window_overlap_clear_enabled = true, -- toggles images when windows are overlapped
+			window_overlap_clear_enabled = true,
 			window_overlap_clear_ft_ignore = { "cmp_menu", "cmp_docs", "" },
 		},
 	},
 	{
 		"benlubas/molten-nvim",
 		version = "^1.0.0",
-		dependencies = {},
 		build = ":UpdateRemotePlugins",
 		init = function()
 			if vim.fn.has("mac") == 1 then
@@ -30,4 +29,4 @@ return {
 			vim.g.molten_output_win_max_height = 20
 		end,
 	},
-}
+} -- Adds support and rendering for Jupyter Notebooks

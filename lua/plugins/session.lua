@@ -10,4 +10,4 @@ return {
 			},
 		},
 	},
-}
+} -- Autosave and load previous session

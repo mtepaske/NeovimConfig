@@ -9,4 +9,4 @@ return {
 			lualine_x = { "filetype" },
 		},
 	},
-}
+} -- Adds status line

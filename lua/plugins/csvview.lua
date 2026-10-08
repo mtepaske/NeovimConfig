@@ -14,7 +14,6 @@ return {
 		},
 		config = function(_, opts)
 			require("csvview").setup(opts)
-
 			vim.api.nvim_create_autocmd("FileType", {
 				pattern = "csv",
 				callback = function()
@@ -24,4 +23,4 @@ return {
 		end,
 		ft = { "csv" },
 	},
-}
+} -- Adds csv file rendering support

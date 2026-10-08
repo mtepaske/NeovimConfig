@@ -36,4 +36,4 @@ return {
 			end,
 		})
 	end,
-}
+} -- Adds syntax highlighting and language manager

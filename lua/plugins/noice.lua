@@ -6,4 +6,4 @@ return {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
 	},
-}
+} -- Adds a floating command line

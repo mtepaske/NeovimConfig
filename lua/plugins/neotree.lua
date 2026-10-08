@@ -24,4 +24,4 @@ return {
 			},
 		},
 	},
-}
+} -- Adds a file explorer
