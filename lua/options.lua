@@ -85,6 +85,8 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 -- Keymappings from the Primagen
 
 vim.keymap.set("n", "<Leader>nf", "<cmd>lua require('neogen').generate()<CR>")
+vim.keymap.set("i", "<C-l>", "<cmd>lua require('neogen').jump_next<CR>")
+vim.keymap.set("i", "<C-h>", "<cmd>lua require('neogen').jump_prev<CR>")
 -- Generate docstring
 
 vim.opt.mouse = ""
