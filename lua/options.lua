@@ -56,8 +56,8 @@ vim.keymap.set("n", "<leader>gs", "<cmd>Neotree float git status<CR>")
 vim.keymap.set("n", "<C-c>", "<cmd>nohl<CR>", { desc = "Clears search highlighting" })
 -- Removes highlighting from search
 
-vim.keymap.set("v", "J", "<cmd>m '>+1<CR>gv=gv", { desc = "Move line down " })
-vim.keymap.set("v", "K", "<cmd>m '<-2<CR>gv=gv", { desc = "Move line down " })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line down " })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line down " })
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join line without moving curser" })
 -- Line joining and line moving keymaps
 
