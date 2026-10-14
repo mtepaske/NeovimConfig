@@ -45,9 +45,6 @@ vim.opt.foldlevelstart = 99
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>")
 -- Keymapping for easy saving
 
-vim.keymap.set("n", "<leader>t", "<cmd>botright 12split | term<CR>")
--- Opens a terminal buffer in a bottom split
-
 vim.keymap.set("n", "\\", "<cmd>Neotree toggle filesystem reveal left<CR>")
 vim.keymap.set("n", "<leader>b", "<cmd>Neotree toggle show buffers left<CR>")
 vim.keymap.set("n", "<leader>gs", "<cmd>Neotree float git status<CR>")

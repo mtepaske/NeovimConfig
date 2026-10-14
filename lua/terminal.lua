@@ -15,6 +15,8 @@ vim.keymap.set("n", "<leader>t", function()
 	end
 end)
 
+vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
+
 local python_terminal = nil
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = "python",
