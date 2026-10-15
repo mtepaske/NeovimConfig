@@ -10,6 +10,7 @@ return {
 			css = { "prettier" },
 			json = { "prettier" },
 			r = { "styler" },
+			markdown = { "prettier" },
 		},
 		formatters = {
 			stylua = {
@@ -22,6 +23,10 @@ return {
 				prepend_args = {
 					"--tab-width",
 					"4",
+					"--print-width",
+					"80",
+					"--prose-wrap",
+					"always",
 				},
 			},
 		},

@@ -86,6 +86,24 @@ vim.keymap.set("i", "<C-l>", "<cmd>lua require('neogen').jump_next<CR>")
 vim.keymap.set("i", "<C-h>", "<cmd>lua require('neogen').jump_prev<CR>")
 -- Generate docstring
 
+vim.api.nvim_create_autocmd("fileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.keymap.set("n", "<leader>r", "<cmd>RenderMarkdown toggle<CR>", {
+			buffer = true,
+			desc = "Toggle markdown rendering",
+		})
+	end,
+})
+vim.api.nvim_create_autocmd("fileType", {
+	pattern = "markdown",
+	callback = function()
+		vim.opt_local.wrap = true
+		vim.opt_local.linebreak = true
+		vim.opt_local.breakindent = true
+	end,
+})
+
 vim.opt.mouse = ""
 vim.opt.mousescroll = "ver:0,hor:0"
 -- Change mouse settings
